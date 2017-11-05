@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import HeaderBtn from "./HeaderBtn";
+import HeaderBtn from "../Components/HeaderBtn";
 
 class App extends React.Component {
   constructor(props) {
@@ -14,21 +14,20 @@ class App extends React.Component {
       <div>
         <div id="logo">
           <div className="col-4">
-            <img id="logo-img" src={require('../images/logo.jpg')} alt="花享" />
-          </div>
-        </div>
+            <img id="logo-img" src={require("../images/logo.jpg")} alt="花享" />
+          </div>{" "}
+        </div>{" "}
         <div id="nav">
           <HeaderBtn value="About" />
           <HeaderBtn value="Artist" />
           <HeaderBtn value="Product" />
-          <HeaderBtn value="booking"/>
-
-          {/* if not using JSX*/}
+          <HeaderBtn value="booking" />
+          {/* if not using JSX*/}{" "}
           {/*{React.createElement(HeaderBtn, {value:"about"})}
-        {React.createElement(HeaderBtn, {value:"product"})}
-        {React.createElement(HeaderBtn, {value:"beautician"})}
-        {React.createElement(HeaderBtn, {value:"booking"})}*/}
-        </div>
+                {React.createElement(HeaderBtn, {value:"product"})}
+                {React.createElement(HeaderBtn, {value:"beautician"})}
+                {React.createElement(HeaderBtn, {value:"booking"})}*/}{" "}
+        </div>{" "}
       </div>
     );
   }

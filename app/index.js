@@ -1,10 +1,14 @@
 var React = require("react");
 var ReactDOM = require("react-dom");
+import { Router, Route, hashHistory, IndexRoute } from "react-router";
+
+require("./css/main.css");
+
 //TODO how to make it as requrie?
-import App from "./Components/App";
-import Content from "./Components/Content";
+import App from "./pages/App";
+import About from "./pages/About";
 
-require("./css/main.css")
-
-ReactDOM.render(<App />, document.getElementById('container'));
-ReactDOM.render(<Content />, document.getElementById('content'));
+{
+  ReactDOM.render(<App />, document.getElementById("container"));
+  ReactDOM.render(<About />, document.getElementById("content"));
+}
