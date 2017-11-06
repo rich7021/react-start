@@ -9,6 +9,6 @@ import App from "./pages/App";
 import About from "./pages/About";
 
 {
-  ReactDOM.render(<App />, document.getElementById("container"));
+  ReactDOM.render(<App />, document.getElementById("header"));
   ReactDOM.render(<About />, document.getElementById("content"));
 }
