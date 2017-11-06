@@ -1,12 +1,15 @@
+
 import React, { Component } from "react";
+import ReactDOM from 'react-dom'
+
 import HeaderBtn from "../Components/HeaderBtn";
+import HeroPage from "./HeroPage";
+import About from "./About";
+import Artist from "./Artist";
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    {
-      /*this.state = {};*/
-    }
+  renderContainer(obj) {
+    ReactDOM.render(obj, document.getElementById("container"));
   }
 
   render() {
@@ -18,8 +21,8 @@ class App extends React.Component {
           </div>{" "}
         </div>{" "}
         <div id="nav">
-          <HeaderBtn value="About" />
-          <HeaderBtn value="Artist" />
+          <HeaderBtn value="About" onClick={() => this.renderContainer(<About />)} />
+          <HeaderBtn value="Artist" onClick={() => this.renderContainer(<Artist />)}/>
           <HeaderBtn value="Product" />
           <HeaderBtn value="booking" />
           {/* if not using JSX*/}{" "}

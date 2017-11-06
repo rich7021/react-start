@@ -7,8 +7,9 @@ require("./css/main.css");
 //TODO how to make it as requrie?
 import App from "./pages/App";
 import About from "./pages/About";
+import HeroPage from "./pages/HeroPage"
 
 {
   ReactDOM.render(<App />, document.getElementById("header"));
-  ReactDOM.render(<About />, document.getElementById("content"));
+  ReactDOM.render(<HeroPage />, document.getElementById("container"));
 }
