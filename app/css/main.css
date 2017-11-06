@@ -1,3 +1,8 @@
+* {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box; /* Opera/IE 8+ */
+}
 #logo-img {
   width: 70px;
   height: 70px;
@@ -12,8 +17,7 @@
   float: left;
   display: inline-block;
   width: 50%;
-  height: 800px;
-  padding: 150px 0 0 0;
+  padding: 20px 20px 0 20px;
 }
 #container .container .img-background {
   background-color: rgba(68, 61, 61, 0.11);
@@ -31,9 +35,11 @@ body {
   background: #e7e7e7;
   margin: 0;
 }
+#logo, #nav {
+  height: 100px;
+}
 #logo {
   float: left;
-  height: 100px;
   width: 33.333%;
   text-align: left;
   position: relative;
@@ -48,7 +54,6 @@ body {
 #nav {
   display: -webkit-box;
   background-color: rgba(68, 61, 61, 0.11);
-  height: 100px;
 }
 #nav p {
   margin-top: 35px;
