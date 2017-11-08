@@ -7,9 +7,9 @@ import Artist from "./Artist";
 
 import HeaderBtn from "../Components/HeaderBtn";
 
-class App extends React.Component {
+class NavBar extends React.Component {
   renderContainer(obj) {
-    ReactDOM.render(obj, document.getElementById("container"));
+    ReactDOM.render(obj, document.getElementById("body"));
   }
 
   render() {
@@ -31,4 +31,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default NavBar;
