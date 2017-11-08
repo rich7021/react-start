@@ -54,6 +54,7 @@ body {
 #body {
   position: absolute;
   top: 100px;
+  width: 100%;
 }
 #body .container {
   display: block;
