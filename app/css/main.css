@@ -16,39 +16,40 @@ body {
   right: 0px;
   z-index: 10000;
   width: 100%;
-  height: 100px;
+  height: 90px;
+  padding: 0 15% 0 10%;
   background-color: #fff; /* make things undered will be hidden*/
 }
 #logo,
 #nav {
-  height: 100px;
+  height: 90px;
 }
 #logo {
   float: left;
-  width: 33.333%;
-  text-align: left;
+  width: 50%;
   position: relative;
-  background-color: rgba(140, 66, 91, 0.22);
+  background-color: #fff;
 }
 #logo img {
-  margin-top: 14px;
+  margin-top: 5px;
   border-radius: 99em;
   position: relative;
   right: -60px;
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
 }
-#nav {
-  display: -webkit-box;
-  background-color: rgba(68, 61, 61, 0.11);
+.nav-btn {
+  width: 10%;
+  font-size: x-small;
+  float: right;
+  text-align: right;
 }
-#nav p {
+.nav-btn p {
   margin-top: 35px;
   padding: 0;
-  font-weight: 600;
-  font-size: 20px;
   text-transform: capitalize;
-  color: #928f8f;
+  color: #000;
+  font-size: medium;
 }
 
 /* body*/
@@ -78,7 +79,9 @@ body {
 #body .container .shop-background {
   background-color: #e7e7e7;
 }
-.container, .shop-background, #img-background {
+.container,
+.shop-background,
+#img-background {
   height: 100%;
 }
 #content .container .shop-background p {
@@ -90,7 +93,7 @@ body {
 
 #hero-img {
   width: 60%;
-  top:-80px;
+  top: -80px;
   position: absolute;
   -webkit-transform: translate(-50%, 0);
 }
@@ -103,8 +106,5 @@ body {
 .col-2 .col-4 .col-6 {
   float: right;
 }
-.col-2 {
-  width: 25%;
-  border: 1px solid #b5b1b1;
-}
+
 /*# sourceMappingURL=test1.css.map */
