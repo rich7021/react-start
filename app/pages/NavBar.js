@@ -26,7 +26,7 @@ class NavBar extends React.Component {
 
   handleScroll(event) {
     let scrollTop = document.documentElement.scrollTop;
-    if (scrollTop > 100) {
+    if (scrollTop > 90) {
       this.addSmallClass("small");
     } else {
       this.addSmallClass("");

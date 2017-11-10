@@ -24,14 +24,17 @@ body {
   transition: all 0.3s;
 }
 #header.small {
+  background-color: rgba(0, 0, 0, 0.3);
   height: 50px;
+}
+#header.small p {
+  color: #fff;
 }
 #logo {
   width: 50%;
   height: inherit;
   float: left;
   position: relative;
-  background-color: #fff;
 }
 #logo img {
   margin-top: 1%;
