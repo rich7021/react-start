@@ -1,11 +1,15 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-{/*pages*/}
+{
+  /*pages*/
+}
 import HeroPage from "./HeroPage";
 import About from "./About";
 import Artist from "./Artist";
 
-{/*components*/}
+{
+  /*components*/
+}
 import HeaderBtn from "../Components/HeaderBtn";
 
 class NavBar extends React.Component {
@@ -26,7 +30,7 @@ class NavBar extends React.Component {
 
   handleScroll(event) {
     let scrollTop = document.documentElement.scrollTop;
-    if (scrollTop > 90) {
+    if (scrollTop > 0) {
       this.addSmallClass("small");
     } else {
       this.addSmallClass("");
@@ -43,7 +47,11 @@ class NavBar extends React.Component {
       <div id="header" className={this.state.className}>
         <div id="logo">
           {/*ref us used to bind this component together with others*/}
-          <LogoImage ref={(child) => { this._child = child; }} />
+          <LogoImage
+            ref={child => {
+              this._child = child;
+            }}
+          />
         </div>
         <div id="nav">
           <HeaderBtn value="booking" />
