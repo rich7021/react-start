@@ -7,7 +7,20 @@ require("./css/main.css");
 import NavBar from "./pages/NavBar";
 import HeroPage from "./pages/HeroPage";
 
+class Index extends React.Component {
+  render() {
+    return (
+      <div id="body-container">
+        <NavBar />
+        <div id="body">
+          <HeroPage />
+        </div>
+        <div id="footer" />
+      </div>
+    );
+  }
+}
+
 {
-  ReactDOM.render(<NavBar />, document.getElementById("header"));
-  ReactDOM.render(<HeroPage />, document.getElementById("body"));
+  ReactDOM.render(<Index />, document.getElementsByTagName("body")[0]);
 }

@@ -19,14 +19,17 @@ body {
   height: 90px;
   padding: 0 15% 0 10%;
   background-color: #fff; /* make things undered will be hidden*/
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
 }
-#logo,
-#nav {
-  height: 90px;
+#header.small {
+  height: 50px;
 }
 #logo {
-  float: left;
   width: 50%;
+  height: inherit;
+  float: left;
   position: relative;
   background-color: #fff;
 }
@@ -35,21 +38,25 @@ body {
   border-radius: 99em;
   position: relative;
   right: -60px;
-  width: 80px;
-  height: 80px;
+  height: 90%;
+  display: table-cell;
+}
+#nav {
+  height: 100%;
 }
 .nav-btn {
+  height: 100%;
   width: 10%;
-  font-size: x-small;
   float: right;
   text-align: right;
+  display: table;
 }
 .nav-btn p {
-  margin-top: 35px;
-  padding: 0;
   text-transform: capitalize;
   color: #000;
   font-size: medium;
+  vertical-align: middle;
+  display: table-cell;
 }
 
 /* body*/
@@ -92,7 +99,7 @@ body {
 }
 
 #hero-img {
-  width: 60%;
+  width: 90%;
   top: -80px;
   position: absolute;
   -webkit-transform: translate(-50%, 0);
