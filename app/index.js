@@ -8,6 +8,12 @@ import NavBar from "./pages/NavBar";
 import HeroPage from "./pages/HeroPage";
 
 class Index extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+    document.documentElement.scrollTop = 0;
+  }
+
   render() {
     return (
       <div id="body-container">

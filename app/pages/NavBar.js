@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-
+{/*pages*/}
 import HeroPage from "./HeroPage";
 import About from "./About";
 import Artist from "./Artist";
 
+{/*components*/}
 import HeaderBtn from "../Components/HeaderBtn";
 
 class NavBar extends React.Component {
@@ -13,7 +14,6 @@ class NavBar extends React.Component {
     this.state = {
       className: ""
     };
-    this.handleScroll = this.handleScroll.bind(this);
   }
 
   renderContainer(obj) {
@@ -21,28 +21,29 @@ class NavBar extends React.Component {
   }
 
   componentDidMount() {
-    window.addEventListener("scroll", this.handleScroll);
+    window.addEventListener("scroll", () => this.handleScroll());
   }
 
   handleScroll(event) {
     let scrollTop = document.documentElement.scrollTop;
-    if (scrollTop > 120) {
-      this.setState({ className: "small" });
+    if (scrollTop > 100) {
+      this.addSmallClass("small");
     } else {
-      this.setState({ className: "" });
+      this.addSmallClass("");
     }
+  }
+
+  addSmallClass(className) {
+    this.setState({ className: className });
+    this._child.shrink(className);
   }
 
   render() {
     return (
       <div id="header" className={this.state.className}>
         <div id="logo">
-          <img
-            id="logo-img"
-            src={require("../images/logo.jpg")}
-            alt="花享"
-            onClick={() => this.renderContainer(<HeroPage />)}
-          />
+          {/*ref us used to bind this component together with others*/}
+          <LogoImage ref={(child) => { this._child = child; }} />
         </div>
         <div id="nav">
           <HeaderBtn value="booking" />
@@ -57,6 +58,35 @@ class NavBar extends React.Component {
           />
         </div>
       </div>
+    );
+  }
+}
+
+class LogoImage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      className: ""
+    };
+  }
+
+  renderContainer(obj) {
+    ReactDOM.render(obj, document.getElementById("body"));
+  }
+
+  shrink(className) {
+    this.setState({ className: className });
+  }
+
+  render() {
+    return (
+      <img
+        id="logo-img"
+        className={this.state.className}
+        src={require("../images/logo.jpg")}
+        alt="花享"
+        onClick={() => this.renderContainer(<HeroPage />)}
+      />
     );
   }
 }
