@@ -64,6 +64,10 @@ class NavBar extends React.Component {
             value="About"
             onClick={() => this.renderContainer(<About />)}
           />
+          <HeaderBtn
+            value="Home"
+            onClick={() => this.renderContainer(<HeroPage />)}
+          />
         </div>
       </div>
     );

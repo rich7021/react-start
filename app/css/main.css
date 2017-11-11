@@ -54,7 +54,7 @@ body {
   height: 100%;
   width: 10%;
   float: right;
-  text-align: right;
+  text-align: center;
   display: table;
 }
 .nav-btn p {
@@ -63,6 +63,10 @@ body {
   font-size: medium;
   vertical-align: middle;
   display: table-cell;
+}
+.nav-btn p:hover {
+  color: #999;
+  cursor: pointer;
 }
 
 /* body*/
