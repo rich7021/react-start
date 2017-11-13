@@ -25,7 +25,7 @@ img {
   width: 100%;
   height: var(--bav-bar-height);
   padding: 0 10% 0 10%;
-  background-color: #fff;/* make things undered will be hidden*/
+  background-color: #fff; /* make things undered will be hidden*/
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s;
@@ -78,6 +78,26 @@ img {
   cursor: pointer;
 }
 /* body*/
+.col-1 .col-2 .col-4 .col-6 .col-8 {
+  float: right;
+  display: inline-block;
+}
+.col-1 {
+  float: left;
+  width: 8.3333%;
+}
+.col-4 {
+  float: left;
+  width: 33.3333%;
+}
+.col-6 {
+  float: left;
+  width: 50%;
+}
+.col-8 {
+  float: left;
+  width: 66.6667%;
+}
 #body {
   position: absolute;
   top: var(--bav-bar-height);
@@ -87,11 +107,6 @@ img {
   display: inline-block;
   width: 100%;
   padding: 20px 20px 0 20px;
-}
-#body .container .col-6 {
-  float: left;
-  display: inline-block;
-  width: 50%;
 }
 #body .content-container {
   padding: 15px 5% 0 5%;
@@ -125,14 +140,33 @@ img {
   margin: 0 5% 0 5%;
   padding: 0 10% 0 10%;
   border-bottom: dashed #999 1px;
-  display: table;
-  height: 50px;
+  height: 90px;
+  background-color: #fff;
 }
-.content-banner p {
+.content-banner.small {
+  position: fixed;
+  top: 50px;
+  height: 50px;
+  z-index: 10000;
+}
+.content-banner .banner-title {
+  display: table;
+}
+.banner-title {
+  float: left;
+}
+.banner-title .content-banner p {
   display: table-cell;
   vertical-align: middle;
 }
-.col-2 .col-4 .col-6 {
-  float: right;
+.content-banner .banner-btn-div {
+  float: left;
+  height: 90%;
+}
+.banner-btn-div .banner-btn {
+  height: 100%;
+  border-radius: 99em;
+  padding: 0 5px 0 5px;
+  float: left;
 }
 /*# sourceMappingURL=test1.css.map */

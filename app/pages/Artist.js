@@ -1,8 +1,16 @@
-import React, { Component } from "react";
+import React, { Component, StyleSheet } from "react";
+
+import Banner from "./artist/Banner";
+import ArtistIntro from "./artist/ArtistIntro";
 
 class Artist extends React.Component {
   render() {
-    return <div>This is Artist Page!</div>;
+    return (
+      <div className="container content-container">
+        <Banner />
+        <ArtistIntro imgPath="../../images/LuChi_profile.jpg" />
+      </div>
+    );
   }
 }
 
