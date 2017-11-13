@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class Intro extends React.Component {
   render() {
     return (
-      <div className="col-6 shop-background">
+      <div className="col-6 intro-content-container">
         <h3>服務內容</h3>
         <p>客製化保鮮花之相關花藝產品設計 依據作品花數及精緻度而定</p>
         <p>可以依據粉絲頁所po的圖，指定喜歡的款式及想要的色系與風格，細節內容可以透過私訊粉絲頁詳談。</p>

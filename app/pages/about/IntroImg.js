@@ -3,10 +3,9 @@ import React, { Component } from "react";
 class IntroImg extends React.Component {
   render() {
     return (
-      <div className="col-6" id="img-background">
+      <div className="col-6 intro-img-container">
         <img
           src={require("../../images/AboutPage.jpg")}
-          style={{ height: 'calc(100% - 30px)' }}
           alt="img"
         />
       </div>

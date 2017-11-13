@@ -8,8 +8,11 @@
   box-sizing: border-box; /* Opera/IE 8+ */
 }
 body {
-  background: #e7e7e7;
   margin: 0;
+}
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* top fixed part*/
@@ -22,17 +25,20 @@ body {
   width: 100%;
   height: var(--bav-bar-height);
   padding: 0 10% 0 10%;
-  background-color: #fff; /* make things undered will be hidden*/
+  background-color: #fff;/* make things undered will be hidden*/
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s;
 }
+#header p {
+  color: #000;
+}
 #header.small {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: #fff;
   height: 50px;
 }
 #header.small p {
-  color: #fff;
+  color: #000;
 }
 #logo {
   width: 50%;
@@ -71,61 +77,62 @@ body {
   color: #999;
   cursor: pointer;
 }
-
 /* body*/
 #body {
   position: absolute;
   top: var(--bav-bar-height);
   width: 100%;
-  padding: 0 10% 0 10%;
-  height: -webkit-calc(100% - 100px);
-  height: -moz-calc(100% - 100px);
-  height: calc(100% - 100px);
 }
 #body .container {
-  display: block;
-  margin: 0 auto;
+  display: inline-block;
   width: 100%;
-  text-align: center;
+  padding: 20px 20px 0 20px;
 }
 #body .container .col-6 {
   float: left;
   display: inline-block;
   width: 50%;
-  padding: 20px 20px 0 20px;
 }
-#img-background {
-  background-color: rgba(68, 61, 61, 0.11);
+#body .content-container {
+  padding: 15px 5% 0 5%;
+  height: calc(100% - 90px);
 }
-#body .container .shop-background {
+#body .container .intro-content-container {
   background-color: #e7e7e7;
 }
 .container,
-.shop-background,
-#img-background {
+.intro-content-container,
+.intro-img-container {
   height: 100%;
 }
-#content .container .shop-background p {
+#content .container .intro-content-container p {
   font-weight: 600;
   font-size: 20px;
   text-transform: capitalize;
   color: #928f8f;
 }
-
+#hero-img-container {
+  text-align: center;
+}
 #hero-img {
   width: 90%;
-  top: -80px;
+  top: -170px;
   position: absolute;
   -webkit-transform: translate(-50%, 0);
 }
-
-.container {
-  display: inline-block;
+.content-banner {
   width: 100%;
-  text-align: center;
+  margin: 0 5% 0 5%;
+  padding: 0 10% 0 10%;
+  border-bottom: dashed #999 1px;
+  display: table;
+  height: 50px;
+}
+.content-banner p {
+  display: table-cell;
+  vertical-align: middle;
 }
 .col-2 .col-4 .col-6 {
   float: right;
 }
-
 /*# sourceMappingURL=test1.css.map */
