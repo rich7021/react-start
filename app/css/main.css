@@ -17,7 +17,7 @@ body {
   z-index: 10000;
   width: 100%;
   height: 90px;
-  padding: 0 15% 0 10%;
+  padding: 0 10% 0 10%;
   background-color: #fff; /* make things undered will be hidden*/
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
@@ -40,7 +40,6 @@ body {
   margin-top: 1%;
   border-radius: 99em;
   position: relative;
-  right: -60px;
   height: 90%;
   display: table-cell;
 }
@@ -74,6 +73,7 @@ body {
   position: absolute;
   top: 100px;
   width: 100%;
+  padding: 0 10% 0 10%;
   height: -webkit-calc(100% - 100px);
   height: -moz-calc(100% - 100px);
   height: calc(100% - 100px);
