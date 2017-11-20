@@ -141,7 +141,7 @@ img {
   background-color: #fff;
 }
 .content-banner.small {
-  position: fixed;
+  position: relative;
   top: 50px;
   height: 50px;
   z-index: 10000;
