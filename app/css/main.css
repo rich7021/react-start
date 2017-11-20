@@ -30,9 +30,6 @@ img {
   -moz-transition: all 0.3s;
   transition: all 0.3s;
 }
-#header p {
-  color: #000;
-}
 #header.small {
   background-color: #fff;
   height: 50px;
