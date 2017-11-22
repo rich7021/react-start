@@ -9,6 +9,7 @@
 }
 body {
   margin: 0;
+  font-family: Microsoft JhengHei, sans-serif;
 }
 img {
   max-width: 100%;
@@ -62,12 +63,11 @@ img {
   font-size: medium;
   vertical-align: middle;
   display: table-cell;
-  border-bottom: 3px solid rgba(255, 255, 255, 0);
 }
-.nav-btn p:hover {
+.nav-btn span:hover {
   /*color: #999;*/
   cursor: pointer;
-  border-bottom: 3px solid #33BBBB;
+  border-bottom: 3px solid #33bbbb;
   box-sizing: content-box;
 }
 /* body*/
