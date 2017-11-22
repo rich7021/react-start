@@ -10,16 +10,23 @@ import HeroPage from "./pages/HeroPage";
 class Index extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      currentBody: <HeroPage />
+    };
     document.documentElement.scrollTop = 0;
+    this.renderBody = this.renderBody.bind(this);
+  }
+
+  renderBody(contentClass) {
+    this.setState({ currentBody: contentClass });
   }
 
   render() {
     return (
       <div id="body-container">
-        <NavBar />
+        <NavBar renderBody={this.renderBody} />
         <div id="body">
-          <HeroPage />
+          {this.state.currentBody}
         </div>
         <div id="footer" />
       </div>

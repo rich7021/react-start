@@ -19,11 +19,6 @@ class NavBar extends React.Component {
       className: ""
     };
   }
-
-  renderContainer(obj) {
-    ReactDOM.render(obj, document.getElementById("body"));
-  }
-
   componentDidMount() {
     window.addEventListener("scroll", () => this.handleScroll());
   }
@@ -51,6 +46,7 @@ class NavBar extends React.Component {
             ref={child => {
               this._child = child;
             }}
+            renderBody={this.props.renderBody}
           />
         </div>
         <div id="nav">
@@ -58,15 +54,15 @@ class NavBar extends React.Component {
           <HeaderBtn value="Product" />
           <HeaderBtn
             value="Artist"
-            onClick={() => this.renderContainer(<Artist />)}
+            onClick={() => this.props.renderBody(<Artist />)}
           />
           <HeaderBtn
             value="About"
-            onClick={() => this.renderContainer(<About />)}
+            onClick={() => this.props.renderBody(<About />)}
           />
           <HeaderBtn
             value="Home"
-            onClick={() => this.renderContainer(<HeroPage />)}
+            onClick={() => this.props.renderBody(<HeroPage />)}
           />
         </div>
       </div>
@@ -75,14 +71,9 @@ class NavBar extends React.Component {
 }
 
 class LogoImage extends React.Component {
-  renderContainer(obj) {
-    ReactDOM.render(obj, document.getElementById("body"));
-  }
-
   shrink(className) {
     this.setState({ className: className });
   }
-
   render() {
     return (
       <img
@@ -90,7 +81,7 @@ class LogoImage extends React.Component {
         className={this.props.className}
         src={require("../images/logo.jpg")}
         alt="花享"
-        onClick={() => this.renderContainer(<HeroPage />)}
+        onClick={() => this.props.renderBody(<HeroPage />)}
       />
     );
   }

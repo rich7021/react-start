@@ -32,7 +32,6 @@ class Artist extends React.Component {
     });
   }
   renderArtistIntro() {
-    console.log("render artist intro " + this.state.currentContext);
     return (
       <ArtistIntro
         img={this.state.currentImg}
