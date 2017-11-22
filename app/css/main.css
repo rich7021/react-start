@@ -31,10 +31,7 @@ img {
   transition: all 0.3s;
 }
 #header.small {
-  background-color: rgba(255,255,255,0.8);
-}
-#header.small p {
-  color: #000;
+  background-color: rgba(255, 255, 255, 0.7);
 }
 #logo {
   width: 50%;
@@ -65,10 +62,13 @@ img {
   font-size: medium;
   vertical-align: middle;
   display: table-cell;
+  border-bottom: 3px solid rgba(255, 255, 255, 0);
 }
 .nav-btn p:hover {
-  color: #999;
+  /*color: #999;*/
   cursor: pointer;
+  border-bottom: 3px solid #33BBBB;
+  box-sizing: content-box;
 }
 /* body*/
 .col-1 .col-2 .col-4 .col-6 .col-8 {
