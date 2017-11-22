@@ -11,7 +11,11 @@ class ArtistIntro extends React.Component {
     return (
       <div className="container content-container">
         <IntroImg img={this.props.img} />
-        <Intro textContent={this.props.textContent} />
+        <Intro
+          title={this.props.title}
+          subtitle={this.props.subtitle}
+          content={this.props.content}
+        />
       </div>
     );
   }

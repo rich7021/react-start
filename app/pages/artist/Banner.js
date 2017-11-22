@@ -45,7 +45,7 @@ class Banner extends React.Component {
                 key={i}
                 className="banner-btn"
                 src={btn.img}
-                alt="花享"
+                alt={btn.title}
                 onClick={() => this.props.onClick(i)}
               />
             );

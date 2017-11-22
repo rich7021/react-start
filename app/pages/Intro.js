@@ -4,7 +4,9 @@ class Intro extends React.Component {
   render() {
     return (
       <div className="col-6 intro-content-container">
-        {this.props.textContent}
+        <h1>{this.props.title}</h1>
+        <h3>{this.props.subtitle}</h3>
+        <div>{this.props.content}</div>
       </div>
     );
   }
