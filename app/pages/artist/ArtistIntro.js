@@ -1,14 +1,13 @@
 import React, { Component } from "react";
 
-import IntroImg from "./IntroImg";
-import Intro from "./Intro";
+import IntroImg from "../IntroImg";
+import Intro from "../Intro";
 
 class ArtistIntro extends React.Component {
   constructor(props) {
     super(props);
   }
   render() {
-    // alert("artistIntro" + this.state.textContent);
     return (
       <div className="container content-container">
         <IntroImg img={this.props.img} />
