@@ -75,13 +75,6 @@ class NavBar extends React.Component {
 }
 
 class LogoImage extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      className: ""
-    };
-  }
-
   renderContainer(obj) {
     ReactDOM.render(obj, document.getElementById("body"));
   }
@@ -94,7 +87,7 @@ class LogoImage extends React.Component {
     return (
       <img
         id="logo-img"
-        className={this.state.className}
+        className={this.props.className}
         src={require("../images/logo.jpg")}
         alt="花享"
         onClick={() => this.renderContainer(<HeroPage />)}
