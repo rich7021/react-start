@@ -38,6 +38,13 @@ class NavBar extends React.Component {
   }
 
   render() {
+    let navList = [
+      { value: "Home", renderObj: HeroPage },
+      { value: "About", renderObj: <About /> },
+      { value: "Artist", renderObj: <Artist /> },
+      { value: "Product", renderObj: null },
+      { value: "booking", renderObj: null }
+    ];
     return (
       <div id="header" className={this.state.className}>
         <div id="logo">
@@ -50,20 +57,15 @@ class NavBar extends React.Component {
           />
         </div>
         <div id="nav">
-          <HeaderBtn value="booking" />
-          <HeaderBtn value="Product" />
-          <HeaderBtn
-            value="Artist"
-            onClick={() => this.props.renderBody(<Artist />)}
-          />
-          <HeaderBtn
-            value="About"
-            onClick={() => this.props.renderBody(<About />)}
-          />
-          <HeaderBtn
-            value="Home"
-            onClick={() => this.props.renderBody(<HeroPage />)}
-          />
+          {navList.reverse().map((item, i) => {
+            return (
+              <HeaderBtn
+                key={i}
+                value={item.value}
+                onClick={() => this.props.renderBody(item.renderObj)}
+              />
+            );
+          })}
         </div>
       </div>
     );

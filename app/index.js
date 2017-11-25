@@ -18,16 +18,16 @@ class Index extends React.Component {
   }
 
   renderBody(contentClass) {
-    this.setState({ currentBody: contentClass });
+    if (contentClass != null) {
+      this.setState({ currentBody: contentClass });
+    }
   }
 
   render() {
     return (
       <div id="body-container">
         <NavBar renderBody={this.renderBody} />
-        <div id="body">
-          {this.state.currentBody}
-        </div>
+        <div id="body">{this.state.currentBody}</div>
         <div id="footer" />
       </div>
     );
