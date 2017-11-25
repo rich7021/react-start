@@ -71,7 +71,7 @@ img {
   box-sizing: content-box;
 }
 /* body*/
-.col-1 .col-2 .col-4 .col-6 .col-8 {
+.col-1 .col-2 .col-4 .col-6 .col-8 .col-12 {
   float: right;
   display: inline-block;
 }
@@ -90,6 +90,10 @@ img {
 .col-8 {
   float: left;
   width: 66.6667%;
+}
+.col-12 {
+  float: left;
+  width: 100%;
 }
 #body {
   position: absolute;

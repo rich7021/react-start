@@ -1,8 +1,24 @@
 import React, { Component } from "react";
 import IntroImg from "./IntroImg";
 import Intro from "./Intro";
+import ArtistIntro from "./artist/ArtistIntro";
 
 class About extends React.Component {
+  constructor(props) {
+    let artists = [
+      {
+        img: require("../images/LuChi_profile.jpg"),
+        name: "林璐旂",
+        summary: "我是來自台灣的香港職人",
+        content: "在這繁忙的生活步調下，慶幸能踏入另一片慢優雅世界"
+      }
+    ];
+    super(props);
+    this.state = {
+      artists: artists
+    };
+  }
+
   renderContent() {
     return (
       <span>
@@ -34,8 +50,18 @@ class About extends React.Component {
   render() {
     return (
       <div className="container content-container">
-        <IntroImg img={this.renderImg()} />
-        <Intro textContent={this.renderContent()} />
+        <div className="col-12">
+          <IntroImg img={this.renderImg()} />
+          <Intro textContent={this.renderContent()} />
+        </div>
+        <div className="col-12">
+          <ArtistIntro
+            img={this.state.artists[0].img}
+            title={this.state.artists[0].name}
+            subtitle={this.state.artists[0].summary}
+            content={this.state.artists[0].content}
+          />
+        </div>
       </div>
     );
   }
