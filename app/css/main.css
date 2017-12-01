@@ -1,5 +1,6 @@
 :root {
   --bav-bar-height: 50px;
+  --container-banner-height: 50px;
 }
 
 * {
@@ -96,15 +97,18 @@ img {
   width: 100%;
 }
 #body {
-  position: absolute;
-  top: var(--bav-bar-height);
   width: 100%;
   height: calc(100% - var(--bav-bar-height));
+  position: absolute;
+  top: var(--bav-bar-height);
+  padding: 0 10%;
 }
 #body .container {
   display: inline-block;
   width: 100%;
-  padding: 0 20px 0 20px;
+  float: left;
+  overflow: hidden;
+  background-color: #eee;
 }
 #body .content-container {
   padding: 15px 5% 0 5%;
@@ -125,19 +129,21 @@ img {
   color: #928f8f;
 }
 
-/*  hero page*/
+.container-banner {
+  text-align: center;
+}
+
+/*  hero page, home*/
 #hero-img-container {
   text-align: center;
   height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  z-index: 1;
 }
 #hero-intro-container {
   border: 1px solid #aaa;
   background-color: #fff;
-  z-index: 2;
   position: relative;
   -webkit-transform: translate(-50%, 0);
   width: 430px;
@@ -145,8 +151,28 @@ img {
   top: 60%;
   left: 50%;
   display: table;
-}
-#hero-intro-container h2 {
   padding: 0 10px 0 10px;
+}
+
+/*  hero page, home*/
+.container-box {
+  height: calc(100% - var(--container-banner-height));
+  display: table;
+}
+.container-banner {
+  height: var(--container-banner-height);
+}
+#about-img-div {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+#about-img {
+  width: 50%;
+  border-radius: 99em;
+}
+#about-intro-div {
+  display: table-cell;
+  vertical-align: middle;
 }
 /*# sourceMappingURL=test1.css.map */
