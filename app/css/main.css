@@ -99,15 +99,16 @@ img {
   position: absolute;
   top: var(--bav-bar-height);
   width: 100%;
+  height: calc(100% - var(--bav-bar-height));
 }
 #body .container {
   display: inline-block;
   width: 100%;
-  padding: 20px 20px 0 20px;
+  padding: 0 20px 0 20px;
 }
 #body .content-container {
   padding: 15px 5% 0 5%;
-  height: calc(100% - 90px);
+  height: 100%;
 }
 #body .container .intro-content-container {
   background-color: #e7e7e7;
@@ -123,13 +124,29 @@ img {
   text-transform: capitalize;
   color: #928f8f;
 }
+
+/*  hero page*/
 #hero-img-container {
   text-align: center;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
 }
-#hero-img {
-  width: 90%;
-  top: -170px;
-  position: absolute;
+#hero-intro-container {
+  border: 1px solid #aaa;
+  background-color: #fff;
+  z-index: 2;
+  position: relative;
   -webkit-transform: translate(-50%, 0);
+  width: 430px;
+  height: 105px;
+  top: 60%;
+  left: 50%;
+  display: table;
+}
+#hero-intro-container h2 {
+  padding: 0 10px 0 10px;
 }
 /*# sourceMappingURL=test1.css.map */
