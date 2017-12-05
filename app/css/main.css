@@ -16,6 +16,9 @@ img {
   max-width: 100%;
   height: auto;
 }
+.circle-image {
+  border-radius: 99em;
+}
 
 /* top fixed part*/
 #header {
@@ -79,6 +82,10 @@ img {
 .col-1 {
   float: left;
   width: 8.3333%;
+}
+.col-3 {
+  float: left;
+  width: 25%;
 }
 .col-4 {
   float: left;
@@ -162,6 +169,7 @@ img {
 .container-banner {
   height: var(--container-banner-height);
 }
+/*  hero page, about*/
 #about-img-div {
   display: table-cell;
   vertical-align: middle;
@@ -169,10 +177,24 @@ img {
 }
 #about-img {
   width: 50%;
-  border-radius: 99em;
 }
 #about-intro-div {
   display: table-cell;
   vertical-align: middle;
 }
+
+/*  hero page, portfolio*/
+.container#heropage-portfolio {
+  background-color: #aaa;
+}
+.portfolio-span {
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  float: none;
+}
+.container#heropage-portfolio img {
+  width: 80%;
+}
+
 /*# sourceMappingURL=test1.css.map */
