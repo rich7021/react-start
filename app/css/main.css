@@ -1,6 +1,6 @@
 :root {
   --bav-bar-height: 50px;
-  --container-banner-height: 50px;
+  --container-banner-height: 100px;
 }
 
 * {
@@ -114,12 +114,11 @@ img {
   display: inline-block;
   width: 100%;
   float: left;
-  overflow: hidden;
   background-color: #eee;
 }
 #body .content-container {
   padding: 15px 5% 0 5%;
-  height: 100%;
+  height: auto;
 }
 #body .container .intro-content-container {
   background-color: #e7e7e7;
@@ -135,7 +134,6 @@ img {
   text-transform: capitalize;
   color: #928f8f;
 }
-
 .container-banner {
   text-align: center;
 }
@@ -163,17 +161,27 @@ img {
 
 /*  hero page, home*/
 .container-box {
-  height: calc(100% - var(--container-banner-height));
+  height: calc(100% - var(--container-banner-height) * 2);
   display: table;
 }
 .container-banner {
   height: var(--container-banner-height);
+  line-height: 100px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+}
+.container-footer {
+  height: var(--container-banner-height);
+  padding: 0 5em 0 5em;
+  text-align: right;
 }
 /*  hero page, about*/
 #about-img-div {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
+  float: none;
 }
 #about-img {
   width: 50%;
@@ -181,6 +189,7 @@ img {
 #about-intro-div {
   display: table-cell;
   vertical-align: middle;
+  float: none;
 }
 
 /*  hero page, portfolio*/
