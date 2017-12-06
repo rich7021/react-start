@@ -5,6 +5,7 @@ import ReactDOM from "react-dom";
 }
 import HeroPage from "./HeroPage";
 import About from "./About";
+import Product from "./Product";
 
 {
   /*components*/
@@ -40,7 +41,7 @@ class NavBar extends React.Component {
     let navList = [
       { value: "Home", renderObj: <HeroPage /> },
       { value: "About", renderObj: <About /> },
-      { value: "Product", renderObj: null },
+      { value: "Product", renderObj: <Product /> },
       { value: "booking", renderObj: null }
     ];
     return (
