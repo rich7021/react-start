@@ -31,11 +31,6 @@ img {
   height: var(--bav-bar-height);
   padding: 0 10% 0 10%;
   background-color: #fff; /* make things undered will be hidden*/
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
-}
-#header.small {
   background-color: rgba(255, 255, 255, 0.7);
 }
 #logo {

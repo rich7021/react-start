@@ -1,39 +1,19 @@
-var React = require("react");
-var ReactDOM = require("react-dom");
+import React from "react";
+import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
+import { createStore } from "redux";
+import App from "./components/App";
+import reducers from "./reducers";
 
 require("./css/main.css");
 
-//TODO how to make it as requrie?
-import NavBar from "./pages/NavBar";
-import HeroPage from "./pages/HeroPage";
-
-class Index extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      currentBody: <HeroPage />
-    };
-    document.documentElement.scrollTop = 0;
-    this.renderBody = this.renderBody.bind(this);
-  }
-
-  renderBody(contentClass) {
-    if (contentClass != null) {
-      this.setState({ currentBody: contentClass });
-    }
-  }
-
-  render() {
-    return (
-      <div id="body-container">
-        <NavBar renderBody={this.renderBody} />
-        <div id="body">{this.state.currentBody}</div>
-        <div id="footer" />
-      </div>
-    );
-  }
-}
-
 {
-  ReactDOM.render(<Index />, document.getElementsByTagName("body")[0]);
+  let store = createStore(reducers);
+
+  ReactDOM.render(
+    <Provider store={store}>
+      <App />
+    </Provider>,
+    document.getElementById("root")
+  );
 }
