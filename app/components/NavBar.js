@@ -1,7 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import HeaderBtn from "../components/HeaderBtn";
 import HeroPage from "../pages/HeroPage";
 import About from "../pages/About";
 import Product from "../pages/Product";
@@ -36,6 +35,18 @@ class NavBar extends React.Component {
 class LogoImage extends React.Component {
   render() {
     return <img id="logo-img" src={require("../images/logo.jpg")} alt="花享" />;
+  }
+}
+
+class HeaderBtn extends React.Component {
+  render() {
+    return (
+      <div className="col-2 nav-btn">
+        <p>
+          <span onClick={this.props.onClick}>{this.props.value}</span>
+        </p>
+      </div>
+    );
   }
 }
 
