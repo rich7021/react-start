@@ -1,5 +1,4 @@
 import { combineReducers } from "redux";
+import { App } from "./App";
 
-const reducers = combineReducers({});
-
-export default reducers;
+export const reducers = combineReducers({ App });

@@ -24,13 +24,21 @@ class NavBar extends React.Component {
         </div>
         <div id="nav">
           {navList.reverse().map((item, i) => {
-            return <HeaderBtn key={i} value={item.value} />;
+            return (
+              <HeaderBtn
+                key={i}
+                onClick={() => this.props.goPage(item.renderObj)}
+                value={item.value}
+              />
+            );
           })}
         </div>
       </div>
     );
   }
 }
+
+export default NavBar;
 
 class LogoImage extends React.Component {
   render() {
@@ -49,5 +57,3 @@ class HeaderBtn extends React.Component {
     );
   }
 }
-
-export default NavBar;
