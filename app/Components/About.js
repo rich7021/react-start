@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import IntroImg from "./IntroImg";
 import Intro from "./Intro";
-import ArtistIntro from "./artist/ArtistIntro";
+import ArtistIntro from "./about/ArtistIntro";
 
 class About extends React.Component {
   constructor(props) {

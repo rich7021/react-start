@@ -1,9 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import HeroPage from "../pages/HeroPage";
-import About from "../pages/About";
-import Product from "../pages/Product";
+import HeroPage from "./HeroPage";
+import About from "./About";
+import Product from "./Product";
 
 class NavBar extends React.Component {
   constructor(props) {
