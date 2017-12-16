@@ -1,11 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import HeroPage from "./HeroPage";
-import About from "./About";
-import Product from "./Product";
+import HeroPage from "../heroPage/HeroPage";
+import About from "../about/About";
+import Product from "../product/Product";
 
-class NavBar extends React.Component {
+class Navbar extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -38,11 +38,13 @@ class NavBar extends React.Component {
   }
 }
 
-export default NavBar;
+export default Navbar;
 
 class LogoImage extends React.Component {
   render() {
-    return <img id="logo-img" src={require("../images/logo.jpg")} alt="花享" />;
+    return (
+      <img id="logo-img" src={require("../../images/logo.jpg")} alt="花享" />
+    );
   }
 }
 

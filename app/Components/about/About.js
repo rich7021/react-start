@@ -1,13 +1,13 @@
 import React, { Component } from "react";
-import IntroImg from "./IntroImg";
-import Intro from "./Intro";
-import ArtistIntro from "./about/ArtistIntro";
+import IntroImg from "../IntroImg";
+import Intro from "../Intro";
+import ArtistIntro from "./ArtistIntro";
 
 class About extends React.Component {
   constructor(props) {
     let artists = [
       {
-        img: require("../images/LuChi_profile.jpg"),
+        img: require("../../images/LuChi_profile.jpg"),
         name: "林璐旂",
         summary: "我是來自台灣的香港職人",
         content: "在這繁忙的生活步調下，慶幸能踏入另一片慢優雅世界"
@@ -45,7 +45,7 @@ class About extends React.Component {
     );
   }
   renderImg() {
-    return require("../images/AboutPage.jpg");
+    return require("../../images/AboutPage.jpg");
   }
   render() {
     return (

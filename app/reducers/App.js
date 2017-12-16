@@ -1,5 +1,5 @@
 import React from "react";
-import HeroPage from "../Components/HeroPage";
+import HeroPage from "../Components/heroPage/HeroPage";
 import { GO_PAGE } from "../actions/App";
 
 const initialState = {

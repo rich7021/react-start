@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import Utils from "../util/Utils";
+import Utils from "../../util/Utils";
 
 class Product extends Component {
   constructor(props) {
     super(props);
-    this.preloadContext = require.context("../images", false);
+    this.preloadContext = require.context("../../images", false);
   }
 
   render() {
@@ -86,6 +86,5 @@ class Product_List extends React.Component {
     );
   }
 }
-
 
 export default Product;

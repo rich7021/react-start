@@ -1,6 +1,6 @@
 import React from "react";
-import Navbar from "./NavBar";
-import HeroPage from "./HeroPage";
+import Navbar from "./header/Navbar";
+import HeroPage from "./heroPage/HeroPage";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 

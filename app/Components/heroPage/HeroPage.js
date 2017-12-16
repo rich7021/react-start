@@ -9,7 +9,7 @@ class HeroPage extends React.Component {
 class HeroPage_Home extends React.Component {
   render() {
     let heroPageData = {
-      img: "url(" + require("../images/HeroPage.jpg") + ")",
+      img: "url(" + require("../../images/HeroPage.jpg") + ")",
       intro: "花享。花想, 將帶你一起走入這寧靜多彩的境地"
     };
     let intro = heroPageData.intro.split(", ");
@@ -40,7 +40,7 @@ class HeroPage_About extends React.Component {
             <img
               id="about-img"
               className="circle-image"
-              src={require("../images/logo.jpg")}
+              src={require("../../images/logo.jpg")}
               alt="花享"
               onClick={() => this.props.renderBody(<HeroPage />)}
             />
@@ -61,7 +61,7 @@ class HeroPage_Portfolio extends React.Component {
   render() {
     let portfolioItems = [];
     for (let i = 0; i < 4; i++) {
-      portfolioItems.push(require("../images/logo.jpg"));
+      portfolioItems.push(require("../../images/logo.jpg"));
     }
     return (
       <div key={3} className="container" id="heropage-portfolio">
