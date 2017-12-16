@@ -12,12 +12,10 @@ class App extends React.Component {
     this.goPage = this.goPage.bind(this);
   }
   goPage(page) {
-    console.log(this.props);
     const actions = this.props.actions;
     actions.goPage(page);
   }
   render() {
-    console.log(this.props);
     const { actions, page } = this.props;
     return (
       <div id="body-container">
