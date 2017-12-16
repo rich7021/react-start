@@ -1,5 +1,10 @@
 import React, { Component } from "react";
+import { bindActionCreators } from "redux";
+import { connect } from "react-redux";
+
 import Utils from "../../util/Utils";
+
+import { showModal } from "../../actions/App";
 
 class Product extends Component {
   constructor(props) {
@@ -76,6 +81,7 @@ class Product_List extends React.Component {
                   className="product-list-img"
                   src={this.props.preloadContext(`${item.img}`)}
                   alt="img"
+                  onClick={() => this.props.actions.showModal()}
                 />
               </div>
               <div className="col-12 product-title">{item.title}</div>
@@ -86,5 +92,13 @@ class Product_List extends React.Component {
     );
   }
 }
+
+function mapDispatchToProps(dispatch) {
+  return {
+    actions: bindActionCreators({ showModal: showModal }, dispatch)
+  };
+}
+
+Product_List = connect(null, mapDispatchToProps)(Product_List);
 
 export default Product;
