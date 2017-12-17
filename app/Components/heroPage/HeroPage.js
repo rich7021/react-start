@@ -10,23 +10,25 @@ class HeroPage_Home extends React.Component {
   render() {
     let heroPageData = {
       img: "url(" + require("../../images/HeroPage.jpg") + ")",
-      intro: "花享。花想, 將帶你一起走入這寧靜多彩的境地"
+      intro: "FIND YOUR FLORA"
     };
     let intro = heroPageData.intro.split(", ");
-    return (
+    return [
       <div
         key={1}
         id="hero-img-container"
-        className="container"
+        className="container opacity-bg-container"
         style={{ backgroundImage: heroPageData.img }}
       >
-        <div id="hero-intro-container">
+        <div id="hero-intro-container" className="opacity-bg-content">
           {intro.map((item, i) => {
-            return <h2 key={i}>{item}</h2>;
+            return <div key={i}>{item}</div>;
           })}
+          <div id="portfolio-btn">SEE PORTFOLIO</div>
         </div>
-      </div>
-    );
+      </div>,
+      <div className="opacity-bg-opacity-layer" />
+    ];
   }
 }
 
