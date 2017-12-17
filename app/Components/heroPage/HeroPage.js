@@ -35,7 +35,7 @@ class HeroPage_Home extends React.Component {
 class HeroPage_About extends React.Component {
   render() {
     return (
-      <div className="container">
+      <div id="about-container" className="container">
         <div className="container-banner">About</div>
         <div className="container-box">
           <div className="col-6" id="about-img-div">
@@ -46,14 +46,18 @@ class HeroPage_About extends React.Component {
               alt="花享"
               onClick={() => this.props.renderBody(<HeroPage />)}
             />
+            <div>067</div>
           </div>
           <div className="col-6" id="about-intro-div">
-            yoyoyo<br />
-            <br /> hehehehehehehe<br />ehehehxhxhskal<br />a1234slslslllsl<br />s234u7uf9a8h9<br
-            />j32897vajho9dshf
+            Seize the moment<br />
+            <br />理工背景的067意外接觸到了<br />將美好畫面<br />凍結成永恆的領域<br
+            />將做著夢將這份喜悅分享出去<br />
+            <br />陪著你客製化你的夢想時刻
           </div>
         </div>
-        <div className="container-footer">more...</div>
+        <div className="container-footer">
+          <div className="btn">more...</div>
+        </div>
       </div>
     );
   }
@@ -83,7 +87,9 @@ class HeroPage_Portfolio extends React.Component {
             );
           })}
         </div>
-        <div className="container-footer">more...</div>
+        <div className="container-footer">
+          <div className="btn">more...</div>
+        </div>
       </div>
     );
   }
