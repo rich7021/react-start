@@ -26,8 +26,7 @@ class Product_Intro extends React.Component {
     //TODO call api get page setting
     var data = {
       bgImg: "./HeroPage.jpg",
-      description:
-        "為了防止世界被破壞, 為了守護世界的和平, 貫徹愛與真實的邪惡, 可愛又迷人的反派角色, 我們是穿梭在銀河中的火箭隊, 白洞、白色的明天正等著我們"
+      description: "Find your own flora here, if you didn't, tell us"
     };
 
     this.state = {
@@ -37,20 +36,21 @@ class Product_Intro extends React.Component {
   }
 
   render() {
-    return (
+    return [
       <div
         id="product-intro"
-        className="container"
+        className="container opacity-bg-container"
         style={{
           backgroundImage:
             "url(" + this.props.preloadContext(this.state.bgImg) + ")"
         }}
       >
-        <div id="product-intro-content">
-          <span>{this.state.desciption}</span>
+        <div id="product-intro-content" className="opacity-bg-content">
+          <div>{this.state.desciption}</div>
         </div>
-      </div>
-    );
+      </div>,
+      <div className="opacity-bg-opacity-layer product-intro" />
+    ];
   }
 }
 
@@ -62,7 +62,12 @@ class Product_List extends React.Component {
       { img: "./HeroPage.jpg", title: "product 1" },
       { img: "./HeroPage.jpg", title: "product 2" },
       { img: "./HeroPage.jpg", title: "product 3" },
-      { img: "./HeroPage.jpg", title: "product 4" }
+      { img: "./HeroPage.jpg", title: "product 4" },
+      { img: "./HeroPage.jpg", title: "product 5" },
+      { img: "./HeroPage.jpg", title: "product 6" },
+      { img: "./HeroPage.jpg", title: "product 7" },
+      { img: "./HeroPage.jpg", title: "product 8" },
+      { img: "./HeroPage.jpg", title: "product 9" }
     ];
     this.state = {
       productList: productList
