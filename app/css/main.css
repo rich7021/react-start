@@ -291,10 +291,47 @@ img.product-list-img {
 }
 .modal-content {
   background-color: #fff;
-  width: 90%;
+  width: 78%;
   height: 90%;
   top: 5%;
-  left: 5%;
+  left: 11%;
   position: relative;
 }
+#product-details {
+  background-color: rgba(0, 0, 0, 0);
+}
+#product-details > #profile {
+  z-index: 99999;
+  position: absolute;
+  height: 16em;
+  width: 16em;
+}
+#product-details > #profile > img {
+  height: 100%;
+  width: 100%;
+}
+#product-details > #product-details-header::before {
+  content: "";
+  height: 10%;
+}
+#product-details > #product-details-header {
+  position: absolute;
+  height: 40%;
+  width: 90%;
+  background-color: #fff;
+  top: 10%;
+  left: 10%;
+  text-align: center;
+}
+#product-details > .content {
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  height: 50%;
+  width: 90%;
+  background-color: #fff;
+  padding: 0 20% 20px 20%;
+  overflow-y: scroll;
+}
+
 /*# sourceMappingURL=test1.css.map */
