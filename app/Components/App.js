@@ -2,7 +2,6 @@ import React from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 
-import Modal from "./Modal";
 import ProductDetails from "./product/ProductDetails";
 import Navbar from "./header/Navbar";
 import HeroPage from "./heroPage/HeroPage";
@@ -22,7 +21,6 @@ class App extends React.Component {
     const { actions, page } = this.props;
     return (
       <div id="body-container">
-        <Modal />
         <ProductDetails />
         <Navbar goPage={this.goPage} />
         <div id="body">{page}</div>
