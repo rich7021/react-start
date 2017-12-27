@@ -59,16 +59,18 @@ class Product_List extends React.Component {
   constructor(props) {
     super(props);
     //TODO call api get product list
+    var categories = [{ name: "a" }, { name: "b" }];
+
     var productList = [
-      { img: "./HeroPage.jpg", title: "product 1" },
-      { img: "./HeroPage.jpg", title: "product 2" },
-      { img: "./HeroPage.jpg", title: "product 3" },
-      { img: "./HeroPage.jpg", title: "product 4" },
-      { img: "./HeroPage.jpg", title: "product 5" },
-      { img: "./HeroPage.jpg", title: "product 6" },
-      { img: "./HeroPage.jpg", title: "product 7" },
-      { img: "./HeroPage.jpg", title: "product 8" },
-      { img: "./HeroPage.jpg", title: "product 9" }
+      { img: "./HeroPage.jpg", title: "product 1", price: 1000 },
+      { img: "./HeroPage.jpg", title: "product 2", price: 2000 },
+      { img: "./HeroPage.jpg", title: "product 3", price: 3000 },
+      { img: "./HeroPage.jpg", title: "product 4", price: 1100 },
+      { img: "./HeroPage.jpg", title: "product 5", price: 1200 },
+      { img: "./HeroPage.jpg", title: "product 6", price: 1300 },
+      { img: "./HeroPage.jpg", title: "product 7", price: 1010 },
+      { img: "./HeroPage.jpg", title: "product 8", price: 1020 },
+      { img: "./HeroPage.jpg", title: "product 9", price: 1030 }
     ];
     this.state = {
       productList: productList
@@ -78,6 +80,7 @@ class Product_List extends React.Component {
   render() {
     return (
       <div className="container content-container">
+        <div className="container-banner">Categories</div>
         {this.state.productList.map((item, i) => {
           return (
             <span key={i} className="col-4 product">
@@ -91,6 +94,7 @@ class Product_List extends React.Component {
                 />
               </div>
               <div className="col-12 product-title">{item.title}</div>
+              <div className="col-12 product-price">${item.price}</div>
             </span>
           );
         })}

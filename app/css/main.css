@@ -265,11 +265,12 @@ div#portfolio-btn {
 .product:hover {
 }
 .product-img,
-.product-title {
+.product-title,
+.product-price {
   text-align: center;
 }
-.product-title {
-  padding: 10px 0 20px 0;
+.product-price {
+  padding: 0 0 20px 0;
 }
 img.product-list-img {
   width: 9em;
