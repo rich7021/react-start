@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 
 import HeroPage from "../heroPage/HeroPage";
 import About from "../about/About";
@@ -11,10 +12,10 @@ class Navbar extends React.Component {
   }
   render() {
     let navList = [
-      { value: "Home", renderObj: <HeroPage /> },
-      { value: "About", renderObj: <About /> },
-      { value: "Product", renderObj: <Product /> },
-      { value: "booking", renderObj: null }
+      { value: "Home" },
+      { value: "About" },
+      { value: "Product" },
+      { value: "booking" }
     ];
 
     return (
@@ -25,11 +26,9 @@ class Navbar extends React.Component {
         <div id="nav">
           {navList.reverse().map((item, i) => {
             return (
-              <HeaderBtn
-                key={i}
-                onClick={() => this.props.goPage(item.renderObj)}
-                value={item.value}
-              />
+              <Link to={"/" + item.value}>
+                <HeaderBtn key={i} value={item.value} />
+              </Link>
             );
           })}
         </div>

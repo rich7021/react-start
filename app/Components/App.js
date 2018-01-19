@@ -1,31 +1,37 @@
 import React from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import ProductDetails from "./product/ProductDetails";
 import Navbar from "./header/Navbar";
 import HeroPage from "./heroPage/HeroPage";
+import About from "./about/about";
+import Product from "./product/Product";
 
 import { goPage } from "../actions/App";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.goPage = this.goPage.bind(this);
   }
-  goPage(page) {
-    const actions = this.props.actions;
-    actions.goPage(page);
-  }
+
   render() {
     const { actions, page } = this.props;
     return (
-      <div id="body-container">
-        <ProductDetails />
-        <Navbar goPage={this.goPage} />
-        <div id="body">{page}</div>
-        <div id="footer" />
-      </div>
+      <Router>
+        <div id="body-container">
+          <ProductDetails />
+          <Navbar />
+          <div id="body">
+            <Route exact path="/" component={HeroPage} />
+            <Route path="/home" component={HeroPage} />
+            <Route path="/about" component={About} />
+            <Route path="/Product" component={Product} />
+          </div>
+          <div id="footer" />
+        </div>
+      </Router>
     );
   }
 }
