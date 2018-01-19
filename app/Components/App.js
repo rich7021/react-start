@@ -3,6 +3,7 @@ import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
+import ScrollToTop from "./ScrollToTop";
 import ProductDetails from "./product/ProductDetails";
 import Navbar from "./header/Navbar";
 import HeroPage from "./heroPage/HeroPage";
@@ -20,18 +21,28 @@ class App extends React.Component {
     const { actions, page } = this.props;
     return (
       <Router>
-        <div id="body-container">
-          <ProductDetails />
-          <Navbar />
-          <div id="body">
-            <Route exact path="/" component={HeroPage} />
-            <Route path="/home" component={HeroPage} />
-            <Route path="/about" component={About} />
-            <Route path="/Product" component={Product} />
-          </div>
-          <div id="footer" />
-        </div>
+        <ScrollToTop>
+          <BodyComponent />
+        </ScrollToTop>
       </Router>
+    );
+  }
+}
+
+class BodyComponent extends React.Component {
+  render() {
+    return (
+      <div id="body-container">
+        <ProductDetails />
+        <Navbar />
+        <div id="body">
+          <Route exact path="/" component={HeroPage} />
+          <Route path="/home" component={HeroPage} />
+          <Route path="/about" component={About} />
+          <Route path="/Product" component={Product} />
+        </div>
+        <div id="footer" />
+      </div>
     );
   }
 }
